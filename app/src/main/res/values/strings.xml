@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Accounting Education</string>
+    <string name="title_activity_kompetensi">kompetensi</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- Button Function-->
+    <string name="btn_next">Next</string>
+    <string name="btn_OK">OK</string>
+    <!-- Button Function-->
+
+    <string name="title_materiweb">Materi Web</string>
+    <string name="title_materippt">Materi PPT</string>
+
+
+    <string name="kompetensi_dasar">\1.1\tMensyukuri  karunia Tuhan Yang Maha Esa, atas pemberian
+        amanah untuk mengelola administrasi keuangan entitas.\n\n
+        1.2 \tMengamalkan ajaran agama dalam memanfaatkan ilmu pengetahuan dan teknologi
+        untuk menghasilkan informasi keuangan yang mudah dipahami, relevan, andal, dan dapat
+        diperbandingkan.\n
+        \n2.1.\tMemiliki motivasi internal dan menunjukkan rasa ingin tahu dalam menemukan dan
+        memahami pengetahuan dasar tentang komputer akuntansi.\n\n
+        2.2.\tMenunjukkan perilaku jujur, disiplin, tanggungjawab, santun, responsif dan pro-aktif
+        dalam berinteraksi secara efektif dalam lingkungan sosial sesuai dengan prinsip etika
+        profesi bidang komputer akuntansi.\n\n        2.3.\tMenghargai kerja individu dan kelompok
+        serta mempunyai kepedulian yang tinggi dalam menjaga keselarasan lingkungan sosial,
+        lingkungan kerja dan alam.\n\n
+        3.15    Menjelaskan pengertian utang lancar dan jenis-jenisnya serta pencatatan utang
+        lancar.\n\n
+        4.15    Mencatat transaksi yang terkait dengan utang lancar.\n
+    </string>
+
+    <string name="indikator_pencapaian">1.\tMampu menjelaskan pengertian dan karakteristik
+        utang lancar dengan benar.\n        \n
+        2.\tMampu menjelaskan jenis-jenis utang lancar dengan benar.\n        \n
+        3.\tMampu menghitung utang lancar dengan benar.\n\n
+        4.\tMampu mencatat transaksi yang berkaitan dengan utang lancar dengan benar.\n\n
+        5.\tMampu menganalisis utang lancar dengan benar.\n\n
+        6.\tMampu menyusun liabilitas jangka pendek dalam laporan keuangan dengan benar.\n\n
+        7.\tMampu menganalisis liabilitas jangka pendek dengan benar.\n
+    </string>
+
+    <string name="kompetensi_inti">KI 3: 	Memahami dan menerapkan pengetahuan faktual, konseptual,
+        prosedural, dan metakognitif berdasarkan rasa ingin tahunya tentang ilmu pengetahuan,
+        teknologi, seni, budaya, dan humaniora dalam wawasan kemanusiaan,  kebangsaan, kenegaraan,
+        dan peradaban terkait penyebab fenomena dan kejadian dalam bidang kerja yang spesifik untuk
+        memecahkan masalah.
+        \n\nKI 4: 	Mengolah, menyaji, dan menalar dalam ranah konkret dan ranah abstrak terkait
+        dengan pengembangan dari yang dipelajarinya di sekolah secara mandiri, bertindak secara
+        efektif dan kreatif, dan mampu melaksanakan tugas spesifik di bawah pengawasan langsung.
+    </string>
+
+    <string name="tentang">
+        \n\tAccounting Education merupakan salah satu media pembelajaran mandiri berupa mobile learning
+        khusus mata pelajaran akuntansi keuangan materi utang jangka pendek yang diperuntukkan untuk
+        siswa Sekolah Menengah Kejuruan Akuntansi kelas XI. AccountingEdu dirancang dalam bentuk
+        aplikasi yang diterapkan pada smartphone berbasis android sehingga siswa dapat kapanpun dan
+        dimanapun belajar. Proses pembelajaran berbasis Scientific Approach memungkinkan siswa untuk
+        melakukan proses pembelajaran secara konstektual dan aktif sebagaimana yang diamanatkan
+        kurikulum 2013.
+
+        \n\tMenu utama AccountingEdu terdiri dari enam bagian, yaitu Home, Material, Forum, Exercise, Share,
+        dan About Us. Proses pembelajaran yang dilakukan siswa terdapat pada menu “Materials”
+        pada bagian mulai pembelajaran. Selama proses pembelajaran siswa dapat berbagi dan saling
+        bertanya dengan guru dan teman-temannya melalui fungsi tombol share.
+
+        \n\n\tUntuk menghubungi peneliti bisa melalui rahmazuli@gmail.com
+        \n
+        \nReferensi yang digunakan:
+        \n1. Muawanah, Umi dkk. 2008. Konsep Dasar Akuntansi dan Pelaporan Keuangan. Jakarta: Direktorat Pembinaan Sekolah Menengah Kejuruan.
+        \n2. Kieso, D. E., Weygandt, J. J., &amp; Warfield, T. D (2011). Intermediate Accounting Volume 1 IFRS Edition. United States of America : Wiley.
+        \n3. <a href="https://www.youtube.com/watch?v=yoTW02t0dkg">https://www.youtube.com/watch?v=yoTW02t0dkg</a>
+        \n4. <a href="https://sukirnopml.files.wordpress.com/2016/03/pertemuan-2-akuntansi-kewajiban-lancar.ppt">
+         https://sukirnopml.files.wordpress.com/2016/03/pertemuan-2-akuntansi-kewajiban-lancar.ppt</a>
+
+    </string>
+
+    <string name="title_activity_buka_blog">bukaBlog</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_open_web">openWeb</string>
+
+
+</resources>
