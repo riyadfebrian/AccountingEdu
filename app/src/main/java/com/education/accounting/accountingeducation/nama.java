@@ -68,8 +68,12 @@ public class nama extends AppCompatActivity implements View.OnClickListener {
         contentValues.put(user.table.COL_4, "");
         contentValues.put(user.table.COL_5, 0);
         contentValues.put(user.table.COL_6, 0);
-       mydB.insert(user.table.TABLE_NAME,null ,contentValues);
-        mydB.close();
+
+        try {
+            mydB.insert(user.table.TABLE_NAME,null ,contentValues);
+        } finally {
+            mydB.close();
+        }
 
     }
 

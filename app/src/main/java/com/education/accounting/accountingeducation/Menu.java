@@ -1,12 +1,16 @@
 package com.education.accounting.accountingeducation;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.education.accounting.accountingeducation.exercise.QuizActivity;
+import com.education.accounting.accountingeducation.exercise.ScrollingActivity;
 import com.education.accounting.accountingeducation.material.youtube;
 
 public class Menu extends AppCompatActivity implements View.OnClickListener {
@@ -57,12 +61,41 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
             Toast.makeText(this, "Coming soon...", Toast.LENGTH_LONG).show();
         } else if (view == exercise) {
            // nopes
-            startActivity(new Intent(this, QuizActivity.class));
+            startActivity(new Intent(this, ScrollingActivity.class));
         } else if (view == share) {
            // nope
             Toast.makeText(this, "Coming soon...", Toast.LENGTH_LONG).show();
         } else if (view == about_us) {
             startActivity(new Intent(this, aboutus.class));
         }
+    }
+
+
+
+    @Override
+    public void onBackPressed() {
+        askToClose();
+    }
+
+    private void askToClose (){
+        AlertDialog.Builder builder = new AlertDialog.Builder(Menu.this);
+        builder.setMessage("Are you sure you want to quit?");
+        builder.setCancelable(true);
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                System.gc();
+                System.exit(0);
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }

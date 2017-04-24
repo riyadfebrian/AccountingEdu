@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -30,13 +29,26 @@
         <activity android:name=".kd" />
         <activity android:name=".ip" />
         <activity android:name=".Menu" />
-        <activity
+        <activity android:name=".exercise.QuizActivity" />
+        <activity android:name=".exercise.TrueFalseQuiz" />
+        <activity android:name=".exercise.Result" />
+
+        <activitys
             android:name=".openWeb"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_open_web"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
 
-        <service android:enabled="true" android:name=".MusicBackground"  android:stopWithTask="true" />
+        <service
+            android:name=".MusicBackground"
+            android:enabled="true"
+            android:stopWithTask="true" />
+
+        <activity
+            android:name=".exercise.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".exercise.Result"></activity>
     </application>
 
 </manifest>

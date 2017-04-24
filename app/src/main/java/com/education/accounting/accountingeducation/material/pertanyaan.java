@@ -53,10 +53,14 @@ public class pertanyaan extends AppCompatActivity implements View.OnClickListene
     }
 
     private void UpdateData (String hasilpengamatan) {
+        long count;
         SQLiteDatabase mydB = new DatabaseHelper(this).getWritableDatabase();
         SQLiteDatabase db = new DatabaseHelper(this).getReadableDatabase();
-        long count = DatabaseUtils.queryNumEntries(db, user.table.TABLE_NAME);
-        db.close();
+        try {
+            count = DatabaseUtils.queryNumEntries(db, user.table.TABLE_NAME);
+        } finally {
+            db.close();
+        }
 
         Log.d("sqlite", "udah masuk ke Update data");
         ContentValues contentValues = new ContentValues();
@@ -64,9 +68,16 @@ public class pertanyaan extends AppCompatActivity implements View.OnClickListene
         contentValues.put(user.table.COL_4, pertanyaan.getText().toString());
         contentValues.put(user.table.COL_5, 0);
         contentValues.put(user.table.COL_6, 0);
-        mydB.update(user.table.TABLE_NAME, contentValues, "ID=" + count,
-                null);
-        mydB.close();
+        try {
+            mydB.update(user.table.TABLE_NAME, contentValues, "ID=" + count,
+                    null);
+        } finally {
+            //It's important to close the statement when you are done with it
+            mydB.close();
+        }
+
+
+
 
 
     }
