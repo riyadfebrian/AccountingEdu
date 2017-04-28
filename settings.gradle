@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':itext5-itextpdf-5.5.11'

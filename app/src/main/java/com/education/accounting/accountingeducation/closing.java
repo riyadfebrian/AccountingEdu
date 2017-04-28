@@ -5,10 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.education.accounting.accountingeducation.menu.Menuv2;
 
 public class closing extends AppCompatActivity implements View.OnClickListener {
 
     private Button end;
+    private ImageView closing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +21,9 @@ public class closing extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_closing);
 
         end = (Button) findViewById(R.id.end);
+        closing = (ImageView) findViewById(R.id.image_closing);
 
+        Glide.with(this).load(R.drawable.closing).into(closing);
         end.setOnClickListener(this);
     }
 
@@ -27,7 +34,6 @@ public class closing extends AppCompatActivity implements View.OnClickListener {
         if(view == end){
             //starting login activity
             finish();
-            startActivity(new Intent(this, Menu.class));
         }
     }
 }

@@ -15,14 +15,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <TextView
-            android:text="Hasil Pengamatan"
+            android:text="@string/hasilpengamatan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-condensed"
             android:layout_marginTop="10dp"
             android:id="@+id/textView2"
             android:scrollbars="vertical"
@@ -35,6 +36,7 @@
             android:inputType="textMultiLine"
             android:ems="10"
             android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed"
             android:id="@+id/editText_hasilpengamatan"
             android:layout_centerHorizontal="true" />
 

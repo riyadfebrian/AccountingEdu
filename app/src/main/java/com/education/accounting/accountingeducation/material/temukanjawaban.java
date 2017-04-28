@@ -62,7 +62,7 @@ public class temukanjawaban extends AppCompatActivity implements View.OnClickLis
         } else {
             direktori = "file.pdf";
             datatype = "application/pdf";
-        };
+        }
 
         InputStream in = null;
         OutputStream out = null;
@@ -95,7 +95,8 @@ public class temukanjawaban extends AppCompatActivity implements View.OnClickLis
         //if logout is pressed
         if(view == next4){
             //starting login activity
-            startActivity(new Intent(this, closing.class));
+            finish();
+            startActivity(new Intent(this, hasilpengamatan.class));
         } else if (view == btn_bukaBlog) {
             startActivity(new Intent(this, openWeb.class));
         } else if (view == btn_bukaPPT) {

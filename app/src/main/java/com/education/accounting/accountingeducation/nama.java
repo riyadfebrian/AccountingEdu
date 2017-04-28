@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.education.accounting.accountingeducation.database.core.DatabaseHelper;
 import com.education.accounting.accountingeducation.database.table.user;
+import com.education.accounting.accountingeducation.menu.*;
+import com.education.accounting.accountingeducation.menu.Menu;
 
 
 public class nama extends AppCompatActivity implements View.OnClickListener {
@@ -25,11 +27,10 @@ public class nama extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nama);
 
-
-
         Intent music = new Intent();
         music.setClass(this,MusicBackground.class);
         startService(music);
+
 
 
         nama = (EditText) findViewById(R.id.editText_nama);
@@ -54,7 +55,7 @@ public class nama extends AppCompatActivity implements View.OnClickListener {
 
             //starting login activity
             finish();
-            startActivity(new Intent(this, Menu.class));
+            startActivity(new Intent(this, Menuv2.class));
         }
     }
 
@@ -66,8 +67,9 @@ public class nama extends AppCompatActivity implements View.OnClickListener {
         contentValues.put(user.table.COL_2, nama.getText().toString());
         contentValues.put(user.table.COL_3, "");
         contentValues.put(user.table.COL_4, "");
-        contentValues.put(user.table.COL_5, 0);
+        contentValues.put(user.table.COL_5, "");
         contentValues.put(user.table.COL_6, 0);
+        contentValues.put(user.table.COL_7, 0);
 
         try {
             mydB.insert(user.table.TABLE_NAME,null ,contentValues);

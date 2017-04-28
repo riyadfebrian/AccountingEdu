@@ -88,6 +88,8 @@ public class openWeb extends AppCompatActivity {
 
     private WebView bukaBlog;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

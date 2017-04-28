@@ -45,42 +45,43 @@ public class pertanyaan extends AppCompatActivity implements View.OnClickListene
             Intent iin= getIntent();
             Bundle b = iin.getExtras();
 
-            UpdateData((String) b.get("HasilPengamatan"));
+            Intent data_transfer = new Intent (this, kesimpulan.class);
+            data_transfer.putExtra("HasilPengamatan", (String) b.get("HasilPengamatan"));
+            data_transfer.putExtra("Pertanyaan", pertanyaan.getText().toString());
+
+
+//            UpdateData((String) b.get("HasilPengamatan"));
 
             finish();
-            startActivity(new Intent(this, temukanjawaban.class));
+            startActivity(data_transfer);
+//            startActivity(new Intent(this, temukanjawaban.class));
         }
     }
 
-    private void UpdateData (String hasilpengamatan) {
-        long count;
-        SQLiteDatabase mydB = new DatabaseHelper(this).getWritableDatabase();
-        SQLiteDatabase db = new DatabaseHelper(this).getReadableDatabase();
-        try {
-            count = DatabaseUtils.queryNumEntries(db, user.table.TABLE_NAME);
-        } finally {
-            db.close();
-        }
-
-        Log.d("sqlite", "udah masuk ke Update data");
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(user.table.COL_3, hasilpengamatan);
-        contentValues.put(user.table.COL_4, pertanyaan.getText().toString());
-        contentValues.put(user.table.COL_5, 0);
-        contentValues.put(user.table.COL_6, 0);
-        try {
-            mydB.update(user.table.TABLE_NAME, contentValues, "ID=" + count,
-                    null);
-        } finally {
-            //It's important to close the statement when you are done with it
-            mydB.close();
-        }
-
-
-
-
-
-    }
+//    private void UpdateData (String hasilpengamatan) {
+//        long count;
+//        SQLiteDatabase mydB = new DatabaseHelper(this).getWritableDatabase();
+//        SQLiteDatabase db = new DatabaseHelper(this).getReadableDatabase();
+//        try {
+//            count = DatabaseUtils.queryNumEntries(db, user.table.TABLE_NAME);
+//        } finally {
+//            db.close();
+//        }
+//
+//        Log.d("sqlite", "udah masuk ke Update data");
+//        ContentValues contentValues = new ContentValues();
+//        contentValues.put(user.table.COL_3, hasilpengamatan);
+//        contentValues.put(user.table.COL_4, pertanyaan.getText().toString());
+//        contentValues.put(user.table.COL_5, 0);
+//        contentValues.put(user.table.COL_6, 0);
+//        try {
+//            mydB.update(user.table.TABLE_NAME, contentValues, "ID=" + count,
+//                    null);
+//        } finally {
+//            //It's important to close the statement when you are done with it
+//            mydB.close();
+//        }
+//    }
 
 
 }

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AccountingEducation.iml" filepath="$PROJECT_DIR$/AccountingEducation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itext5-itextpdf-5.5.11/itext5-itextpdf-5.5.11.iml" filepath="$PROJECT_DIR$/itext5-itextpdf-5.5.11/itext5-itextpdf-5.5.11.iml" />
     </modules>
   </component>
 </project>

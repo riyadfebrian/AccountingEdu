@@ -2,7 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.education.accounting.accountingeducation">
 
+    <supports-screens
+        android:smallScreens="false"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:xlargeScreens="true"
+        />
+
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -10,33 +19,46 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".menu.Menu"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Instruction" />
         <activity android:name=".nama" />
         <activity android:name=".material.youtube" />
-        <activity android:name=".material.hasilpengamatan" />
-        <activity android:name=".material.pertanyaan" />
+        <activity
+            android:name=".material.hasilpengamatan"
+            android:label="Hasil pengamatan" />
+        <activity
+            android:name=".material.pertanyaan"
+            android:label="Pertanyaan" />
         <activity android:name=".material.temukanjawaban" />
         <activity android:name=".closing" />
         <activity android:name=".aboutus" />
         <activity android:name=".ki" />
         <activity android:name=".kd" />
         <activity android:name=".ip" />
-        <activity android:name=".Menu" />
+        <activity
+            android:name=".Menu"
+            android:label="Menu" />
         <activity android:name=".exercise.QuizActivity" />
-        <activity android:name=".exercise.TrueFalseQuiz" />
-        <activity android:name=".exercise.Result" />
-
-        <activitys
+        <activity
+            android:name=".exercise.TrueFalseQuiz"
+            android:label="Exercise Benar atau Salah" />
+        <activity
+            android:name=".exercise.Result"
+            android:label="Hasil Exercise" />
+        <activity
             android:name=".openWeb"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_open_web"
             android:theme="@style/FullscreenTheme" />
 
         <service
@@ -46,9 +68,38 @@
 
         <activity
             android:name=".exercise.ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
+            android:label="Exercise Pilihan Ganda" />
+        <activity
+            android:name=".menu.Menuv2"
+            android:largeHeap="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".menu.test"
+            android:label="@string/title_activity_test"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".exercise.Result"></activity>
+        <activity
+            android:name=".material.kesimpulan"
+            android:label="@string/title_activity_kesimpulan">
+
+        </activity>
+        <activity
+            android:name=".menu.test2"
+            android:label="@string/title_activity_test2"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".petunjuk"
+            android:label="Petunjuk Penggunaan"
+            android:largeHeap="true">
+
+        </activity>
+        <activity
+            android:name=".home.main_home"
+            android:label="Home"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

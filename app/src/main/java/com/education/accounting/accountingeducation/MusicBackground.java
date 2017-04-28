@@ -30,7 +30,8 @@ public class MusicBackground extends Service {
         return 1;
     }
 
-    public void onStart(Intent intent, int startId) {
+    public void onStart() {
+        player.start();
         // TO DO
     }
     public IBinder onUnBind(Intent arg0) {
@@ -44,6 +45,7 @@ public class MusicBackground extends Service {
     }
     public void onPause() {
         player.stop();
+        player.release();
     }
 
 

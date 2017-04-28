@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import com.education.accounting.accountingeducation.database.core.DatabaseHelper;
 import com.education.accounting.accountingeducation.exercise.Result;
+import com.education.accounting.accountingeducation.menu.*;
+import com.education.accounting.accountingeducation.menu.Menu;
 
 
 public class MainActivity extends AppCompatActivity {

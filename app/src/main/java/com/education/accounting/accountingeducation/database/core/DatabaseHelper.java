@@ -1,6 +1,5 @@
 package com.education.accounting.accountingeducation.database.core;
 
-import com.education.accounting.accountingeducation.database.model.model;
 import com.education.accounting.accountingeducation.database.table.user;
 
 import android.content.ContentValues;

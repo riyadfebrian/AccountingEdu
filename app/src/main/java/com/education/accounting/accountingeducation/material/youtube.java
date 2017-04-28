@@ -9,13 +9,16 @@ import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import com.education.accounting.accountingeducation.MusicBackground;
 import com.education.accounting.accountingeducation.R;
+import com.education.accounting.accountingeducation.status_counter;
 
 public class youtube extends AppCompatActivity  implements View.OnClickListener {
     Button click;
     VideoView video;
     MediaController mediaC;
     private Button next;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +40,20 @@ public class youtube extends AppCompatActivity  implements View.OnClickListener 
         //if logout is pressed
         if(view == next){
             //starting login activity
-            startActivity(new Intent(this, hasilpengamatan.class));
+            finish();
+            startActivity(new Intent(this, temukanjawaban.class));
         }
     }
 
 
     public void videoplay(View v) {
+        if (status_counter.isPlaying) {
+            stopService(new Intent(getBaseContext(), MusicBackground.class));
+        } else if (!status_counter.isPlaying){
+            startService(new Intent(getBaseContext(), MusicBackground.class));
+        }
+
+
         String videopath = "android.resource://com.education.accounting.accountingeducation/"+R.raw.samplevideo;
         Uri uri = Uri.parse(videopath);
         video.setVideoURI(uri);

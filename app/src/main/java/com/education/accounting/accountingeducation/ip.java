@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.education.accounting.accountingeducation.menu.Menuv2;
+
 public class ip extends AppCompatActivity implements View.OnClickListener {
 
     private Button lanjut_menu;
@@ -27,7 +29,7 @@ public class ip extends AppCompatActivity implements View.OnClickListener {
         if(view == lanjut_menu){
             //starting login activity
             finish();
-            startActivity(new Intent(this, Menu.class));
+            startActivity(new Intent(this, Menuv2.class));
         }
     }
 }
