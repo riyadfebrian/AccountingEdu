@@ -18,45 +18,51 @@ tools:context="com.education.accounting.accountingeducation.material.pertanyaan"
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true">
 
-    <TextView
-        android:text="Questioning"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textSize="30dp"
-        android:id="@+id/textView2"
-        android:scrollbars="vertical"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textStyle="normal|bold" />
+    <!--<TextView-->
+        <!--android:text="Questioning"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:textSize="30dp"-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:scrollbars="vertical"-->
+        <!--android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+        <!--android:textStyle="normal|bold" />-->
 
     <TextView
         android:text="@string/pertanyaan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="15dp"
-        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="17sp"
+        android:textColor="#2c3e50"
         android:layout_marginTop="5dp"
         android:id="@+id/textView3"
         android:scrollbars="vertical"
+        android:layout_marginBottom="10sp"
         />
 
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="262dp"
-        android:inputType="textMultiLine"
+        android:layout_height="328dp"
+        android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
+        android:gravity="top|start"
+        android:textSize="12sp"
+        android:textColor="#34495e"
+        android:background="@drawable/round"
+        android:fontFamily="sans-serif-condensed"
         android:ems="10"
-        android:layout_gravity="center"
-        android:id="@+id/editText_pertanyaan"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/editText_pertanyaan"/>
 
     <Button
-        android:text="Next"
-        android:layout_width="match_parent"
+        android:text="@string/btn_next"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:id="@+id/next3" />
 </LinearLayout>
 

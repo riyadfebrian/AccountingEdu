@@ -29,16 +29,17 @@
         <TextView
             android:text='"Orang yang Terpelajar adalah orang yang menggunakan waktu luangnya untuk belajar"'
             android:layout_width="303dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:id="@+id/textView6"
-            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:layout_weight="0.30" />
 
         <Button
-            android:text="OK"
-            android:layout_width="match_parent"
+            android:text="@string/btn_OK"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/end" />
     </LinearLayout>

@@ -32,17 +32,23 @@
             android:name=".menu.Menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Instruction" />
-        <activity android:name=".nama" />
-        <activity android:name=".material.youtube" />
+        <activity android:name=".nama"
+            android:label="Login"/>
+        <activity android:name=".material.youtube"
+            android:label="Materi Video"/>
         <activity
             android:name=".material.hasilpengamatan"
-            android:label="Hasil pengamatan" />
+            android:label="Hasil pengamatan"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".material.pertanyaan"
-            android:label="Pertanyaan" />
+            android:label="Pertanyaan"
+            android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".material.temukanjawaban" />
-        <activity android:name=".closing" />
-        <activity android:name=".aboutus" />
+        <activity android:name=".closing"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".aboutus"
+            android:label="About Us"/>
         <activity android:name=".ki" />
         <activity android:name=".kd" />
         <activity android:name=".ip" />
@@ -80,8 +86,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".material.kesimpulan"
-            android:label="@string/title_activity_kesimpulan">
-
+            android:label="@string/title_activity_kesimpulan"
+            android:windowSoftInputMode="adjustPan">
         </activity>
         <activity
             android:name=".menu.test2"

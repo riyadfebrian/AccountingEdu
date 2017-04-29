@@ -10,7 +10,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 import com.education.accounting.accountingeducation.database.core.DatabaseHelper;
 import com.education.accounting.accountingeducation.database.table.user;
 import com.education.accounting.accountingeducation.menu.*;
@@ -21,11 +24,15 @@ public class nama extends AppCompatActivity implements View.OnClickListener {
 //    DatabaseHelper mydB;
     private EditText nama;
     private Button login;
+    private ImageView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nama);
+
+        logo = (ImageView) findViewById(R.id.img_logo_nama);
+        Glide.with(this).load(R.drawable.logo).into(logo);
 
         Intent music = new Intent();
         music.setClass(this,MusicBackground.class);
@@ -35,6 +42,7 @@ public class nama extends AppCompatActivity implements View.OnClickListener {
 
         nama = (EditText) findViewById(R.id.editText_nama);
         login = (Button) findViewById(R.id.btn_nama);
+
 
         login.setOnClickListener(this);
     }

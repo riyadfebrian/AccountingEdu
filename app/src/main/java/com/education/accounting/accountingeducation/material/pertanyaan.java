@@ -1,9 +1,11 @@
 package com.education.accounting.accountingeducation.material;
 
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +17,7 @@ import android.widget.Toast;
 import com.education.accounting.accountingeducation.R;
 import com.education.accounting.accountingeducation.database.core.DatabaseHelper;
 import com.education.accounting.accountingeducation.database.table.user;
+import com.education.accounting.accountingeducation.menu.Menuv2;
 
 public class pertanyaan extends AppCompatActivity implements View.OnClickListener {
 
@@ -45,7 +48,7 @@ public class pertanyaan extends AppCompatActivity implements View.OnClickListene
             Intent iin= getIntent();
             Bundle b = iin.getExtras();
 
-            Intent data_transfer = new Intent (this, kesimpulan.class);
+            Intent data_transfer = new Intent (this, temukanjawaban.class);
             data_transfer.putExtra("HasilPengamatan", (String) b.get("HasilPengamatan"));
             data_transfer.putExtra("Pertanyaan", pertanyaan.getText().toString());
 
@@ -56,6 +59,34 @@ public class pertanyaan extends AppCompatActivity implements View.OnClickListene
             startActivity(data_transfer);
 //            startActivity(new Intent(this, temukanjawaban.class));
         }
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        askToClose();
+    }
+
+    private void askToClose (){
+        AlertDialog.Builder builder = new AlertDialog.Builder(pertanyaan.this);
+        builder.setMessage("Apakah anda yakin akan kembali ? Data-data yang telah anda masukkan akan hilang");
+        builder.setCancelable(true);
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                finish();
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
 //    private void UpdateData (String hasilpengamatan) {

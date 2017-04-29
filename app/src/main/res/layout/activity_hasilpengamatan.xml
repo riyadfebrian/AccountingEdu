@@ -22,28 +22,32 @@
             android:text="@string/hasilpengamatan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:fontFamily="sans-serif-condensed"
+            android:textSize="15sp"
+            android:textColor="#2c3e50"
             android:layout_marginTop="10dp"
             android:id="@+id/textView2"
-            android:scrollbars="vertical"
             />
 
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:inputType="textMultiLine"
+            android:layout_height="328dp"
+            android:gravity="top|start"
             android:ems="10"
-            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:textColor="#34495e"
+            android:background="@drawable/round"
             android:fontFamily="sans-serif-condensed"
+            android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
             android:id="@+id/editText_hasilpengamatan"
-            android:layout_centerHorizontal="true" />
+            />
 
         <Button
             android:text="@string/btn_next"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:id="@+id/next2" />
     </LinearLayout>
 

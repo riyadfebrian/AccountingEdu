@@ -7,11 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.MediaController;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.education.accounting.accountingeducation.MusicBackground;
 import com.education.accounting.accountingeducation.R;
 import com.education.accounting.accountingeducation.status_counter;
+
+import static com.education.accounting.accountingeducation.status_counter.fabIsEnable;
+import static com.education.accounting.accountingeducation.status_counter.lihatVideo;
 
 public class youtube extends AppCompatActivity  implements View.OnClickListener {
     Button click;
@@ -39,18 +43,29 @@ public class youtube extends AppCompatActivity  implements View.OnClickListener 
     public void onClick(View view) {
         //if logout is pressed
         if(view == next){
-            //starting login activity
-            finish();
-            startActivity(new Intent(this, temukanjawaban.class));
+
+            if (lihatVideo) {
+                if (status_counter.isPlaying || fabIsEnable) {
+                    startService(new Intent(getBaseContext(), MusicBackground.class));
+                }
+
+                lihatVideo = false;
+                //starting login activity
+                finish();
+                startActivity(new Intent(this, hasilpengamatan.class));
+            } else {
+                Toast.makeText(youtube.this,"Lihat dulu Video Materi",Toast.LENGTH_LONG).show();
+
+
+            }
         }
     }
 
 
     public void videoplay(View v) {
-        if (status_counter.isPlaying) {
+        lihatVideo = true;
+        if (status_counter.isPlaying || fabIsEnable) {
             stopService(new Intent(getBaseContext(), MusicBackground.class));
-        } else if (!status_counter.isPlaying){
-            startService(new Intent(getBaseContext(), MusicBackground.class));
         }
 
 

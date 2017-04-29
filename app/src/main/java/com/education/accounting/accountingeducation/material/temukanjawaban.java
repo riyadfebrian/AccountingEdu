@@ -1,9 +1,12 @@
 package com.education.accounting.accountingeducation.material;
 
 import android.content.ActivityNotFoundException;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.database.DatabaseUtils;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +17,8 @@ import android.widget.Toast;
 
 import com.education.accounting.accountingeducation.R;
 import com.education.accounting.accountingeducation.closing;
+import com.education.accounting.accountingeducation.database.core.DatabaseHelper;
+import com.education.accounting.accountingeducation.database.table.user;
 import com.education.accounting.accountingeducation.openWeb;
 
 import java.io.File;
@@ -41,6 +46,7 @@ public class temukanjawaban extends AppCompatActivity implements View.OnClickLis
         btn_bukaBlog.setOnClickListener(this);
         btn_bukaPPT.setOnClickListener(this);
         btn_bukaPDF.setOnClickListener(this);
+
 
     }
 
@@ -95,8 +101,17 @@ public class temukanjawaban extends AppCompatActivity implements View.OnClickLis
         //if logout is pressed
         if(view == next4){
             //starting login activity
+
+
+            Intent iin= getIntent();
+            Bundle b = iin.getExtras();
+
+            Intent data_transfer = new Intent (this, kesimpulan.class);
+            data_transfer.putExtra("HasilPengamatan", (String) b.get("HasilPengamatan"));
+            data_transfer.putExtra("Pertanyaan", (String) b.get("Pertanyaan"));
+
             finish();
-            startActivity(new Intent(this, hasilpengamatan.class));
+            startActivity(data_transfer);
         } else if (view == btn_bukaBlog) {
             startActivity(new Intent(this, openWeb.class));
         } else if (view == btn_bukaPPT) {
@@ -105,4 +120,6 @@ public class temukanjawaban extends AppCompatActivity implements View.OnClickLis
             CopyReadAssets("pdf");
         }
     }
+
+
 }
